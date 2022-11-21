@@ -3,73 +3,88 @@
     <head>
         <meta charset="utf-8">
         <title>연습문제 6-1,45page</title>
+
+        <script>
+            window.onload = function() {
+
+                var btn1 = document.querySelector("#btn1");
+
+                btn1.onclick = function() {
+                    var id = document.querySelector("#id");
+                    alert(id.value + "가 입력됨");
+                }
+
+            }
+
+        </script>
         
         <style>
-            .aaa   {
-                background-color: rgb(203, 163, 241);
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center; 
-                <!-- 이 부분은 무슨뜻인지 모르겠는데 쓰니까 가운데 정렬이 되길래
-                    프로필페이지 코드에서 복사해 옴_가로에 컨텐츠랑 글자를 다 센터정렬하라는 뜻으로 대충 이해 중-->
+              .aaa   {
+            background-color: rgb(203, 163, 241);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center; 
+               <!--이 부분은 무슨뜻인지 모르겠는데 쓰니까 가운데 정렬이 되길래
+                프로필페이지 코드에서 복사해 옴_가로에 컨텐츠랑 글자를 다 센터정렬하라는 뜻으로 대충 이해 중-->
             } 
-        
-            .bbb{
-                background-color: aqua;
-                display:inline-block;
-                width: 80px;
-                text-align: right;
-            }
+       
+        .bbb{
+            background-color: aqua;
+            display:inline-block;
+            width: 90px;
+            text-align: right;
+        }
+       
         </style>
 
     </head>
 
     <body>
         <div class="aaa">
-            <h2 style="text-align: center;">회원 정보 입력 폼</h2>
-            <div class="aaa">
-                <form method="post">
-                    <p>
-                        <span class="bbb">이름 </span>
-                        <input type="text"  name="name" size="10" maxlength="4" value="뿔버섯" >
-                    </p>
-                    <p>
-                    <span class="bbb" > 휴대폰 번호 </span>    
-                    <select> 
-                        <option value="010">010</option>
-                        <option value="011">111</option>
-                        <option value="012">012</option>
-                        <option value="013">013</option>
-                        <option value="014">014</option>
-                        <option value="112">112</option>
-                    </select> -
-                    <input type="text" name="phone2" size="5" maxlength="4">-
-                    <input type="text" name="phone3" size="5" maxlength="4">
-                    </p>
-                    <p>
-                        <span class="bbb">직업</span> 
-                        <select> 
-                            <option value="시작">직업을 선택하세요</option>
-                            <option value="학자">학자</option>
-                            <option value="사무">사무</option>
-                            <option value="영업">영업</option>
-                            <option value="경영">경영</option>
-                            <option value="서비스">서비스</option>
-                        </select> </p>
-                    <p>
-                        <span class="bbb">취미</span>
-                        <input type="checkbox" name="hobby" value="영화감상">영화감상
-                        <input type="checkbox" name="hobby" value="골프">골프
-                        <input type="checkbox" name="hobby" value="낚시">낚시
-                        <input type="checkbox" name="hobby" value="기타">기타
-                    </p>
-                    
-                    <button type="submit" name="가입하기" style="margin-left:90px ;">가입하기</button>
-                    <button type="reset" name="다시쓰기" style="margin-left:30px ;">다시쓰기</button>
-                    
-                </form>
-            </div>
+        <h2 style="text-align: center;">회원 정보 입력 폼</h2>
+        
+        <form method="post">
+        
+            <span class="bbb">이름 </span>
+        <input type="text"  name="name" size="10" maxlength="4" value="뿔버섯" >
+        <input type="button" value="인증하기" id="btn1">
+        
+        <p>
+       <span class="bbb" > 휴대폰 번호 </span>    
+        <select> 
+            <option value="010">010</option>
+            <option value="011">111</option>
+            <option value="012">012</option>
+            <option value="013">013</option>
+            <option value="014">014</option>
+            <option value="112">112</option>
+        </select> -
+        <input type="text" name="phone2" size="5" maxlength="4">-
+        <input type="text" name="phone3" size="5" maxlength="4">
+        </p><p>
+        <span class="bbb">직업</span> 
+        <select> 
+            <option value="시작">직업을 선택하세요</option>
+            <option value="학자">학자</option>
+            <option value="사무">사무</option>
+            <option value="영업">영업</option>
+            <option value="경영">경영</option>
+            <option value="서비스">서비스</option>
+        </select> </p>
+        <p>
+        <span class="bbb">취미</span>
+        <input type="checkbox" name="hobby" value="영화감상">영화감상
+        <input type="checkbox" name="hobby" value="골프">골프
+        <input type="checkbox" name="hobby" value="낚시">낚시
+        <input type="checkbox" name="hobby" value="기타">기타
+        </p>
+        
+        <button type="submit" name="가입하기" style="margin-left:90px ;">가입하기</button>
+        <button type="reset" name="다시쓰기" style="margin-left:30px ;">다시쓰기</button>
+        
+        </form>
+        </div>
         </div>
     </body>
 </html>
