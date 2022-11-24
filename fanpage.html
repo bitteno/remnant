@@ -102,10 +102,29 @@
   </style>
 
     <script>
-        function btn(){
-    alert('소중한 댓글 감사합니다.\n응원이 검토 후 등록됩니다.');
-        }
+      function btn(){
+        const card = document.createElement('div');
+        card.className = 'card';
+        const cardBody = document.createElement('div');
+        cardBody.className = 'card-body';
+        const blockquote = document.createElement('blockquote');
+        blockquote.className = 'blockquote mb-0';
+        const pDetail = document.createElement('p');
+        pDetail.innerText = document.querySelector('.mytext').value;
+        document.querySelector('.mytext').value = '';
+        const blockquoteFooter = document.createElement('footer');
+        blockquoteFooter.className = 'blockquote-footer';
+        blockquoteFooter.innerText = document.querySelector('.mynic').value;
+        document.querySelector('.mynic').value = '';
 
+        blockquote.appendChild(pDetail)
+        blockquote.appendChild(blockquoteFooter)
+        cardBody.appendChild(blockquote)
+        card.appendChild(cardBody)
+        document.body.appendChild(card);
+
+        alert('소중한 댓글 감사합니다.\n응원이 검토 후 등록됩니다.');
+      }
     </script>
 </head>
 
@@ -117,14 +136,14 @@
 
     <div class="mybox">
         <div>
-            <input type="text" class="mynic" value="닉네임">
+            <input type="text" class="mynic" placeholder="닉네임">
         </div>
         <div >
-            <textarea class="mytext" >응원댓글</textarea>
+            <textarea class="mytext" placeholder="응원댓글"></textarea>
         </div>
 
         <div >
-             <button style="background-color: black;color: white;" class="mybutton" onclick="javascript:btn()">응원 남기기</button>
+          <button style="background-color: black;color: white;" class="mybutton" onclick="javascript:btn()">응원 남기기</button>
         </div>
     </div>
 
